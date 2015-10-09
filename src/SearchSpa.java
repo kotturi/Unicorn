@@ -194,6 +194,7 @@ public class SearchSpa {
 	@Test(priority=7)
 	public static void Book() throws InterruptedException 
 		{
+		//Coment
 		System.out.println("Book Appointment");
 		//Setup.driver.findElement(By.id("com.popcorn.unicorn:id/footer_name_txt_view")).click();
 		Setup.driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
