@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  Test3</title>
+<title>TestNG:  SearchSpa</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Test3</h2><table border='1' align="center">
+<h2 align='center'>SearchSpa</h2><table border='1' align="center">
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Oct 14 15:36:43 IST 2015</td>
+<td>Started on:</td><td>Fri Oct 16 10:36:25 IST 2015</td>
 </tr>
-<tr><td>Total time:</td><td>40 seconds (40686 ms)</td>
+<tr><td>Total time:</td><td>305 seconds (305281 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,14 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='SearchSpa.Product_Sel()'><b>Product_Sel</b><br>Test class: SearchSpa</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15.63 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 300.03 seconds
 Build info: version: &apos;2.47.1&apos;, revision: &apos;411b314&apos;, time: &apos;2015-07-30 03:03:16&apos;
 System info: host: &apos;POPTesting-PC&apos;, ip: &apos;10.10.6.122&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_60&apos;
-*** Element info: {Using=name, value=Tangerine Spa}
-Session ID: c4990b7a-1289-4894-925a-91b0772f4c8b
+*** Element info: {Using=id, value=com.popcorn.unicorn:id/online_booking}
+Session ID: c6d4e6f6-0f00-445d-9c63-4b6129faad76
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, platform=LINUX, databaseEnabled=false, javascriptEnabled=true, deviceName=HT35JW912039, platformName=Android, browserName=, app-package=com.popcorn.unicorn, webStorageEnabled=false, networkConnectionEnabled=true, app-activity=com.popcorn.unicorn.MainActivity, desired={app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, platformVersion=5.1.1, platformName=Android, deviceName=HT35JW912039, browserName=, app-package=com.popcorn.unicorn, app-activity=com.popcorn.unicorn.MainActivity}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]
+Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.6.apk, platform=LINUX, databaseEnabled=false, javascriptEnabled=true, deviceName=HT35JW912039, platformName=Android, browserName=, app-package=com.popcorn.unicorn, webStorageEnabled=false, networkConnectionEnabled=true, app-activity=com.popcorn.unicorn.MainActivity, desired={app=E:\apk\Unicorn\Unicorn_v0.6.apk, platformVersion=5.1.1, platformName=Android, deviceName=HT35JW912039, browserName=, app-package=com.popcorn.unicorn, app-activity=com.popcorn.unicorn.MainActivity}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
@@ -92,26 +91,30 @@ Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, pla
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:421)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByName(DefaultGenericMobileDriver.java:102)
-	at io.appium.java_client.AppiumDriver.findElementByName(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByName(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByName.findElement(By.java:300)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:389)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:215)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at SearchSpa.Product_Sel(SearchSpa.java:52)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace977512709", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace977512709'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15.63 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:861)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:859)
+	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:387)
+	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at SearchSpa.Product_Sel(SearchSpa.java:56)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace24612275", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace24612275'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 300.03 seconds
 Build info: version: &apos;2.47.1&apos;, revision: &apos;411b314&apos;, time: &apos;2015-07-30 03:03:16&apos;
 System info: host: &apos;POPTesting-PC&apos;, ip: &apos;10.10.6.122&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_60&apos;
-*** Element info: {Using=name, value=Tangerine Spa}
-Session ID: c4990b7a-1289-4894-925a-91b0772f4c8b
+*** Element info: {Using=id, value=com.popcorn.unicorn:id/online_booking}
+Session ID: c6d4e6f6-0f00-445d-9c63-4b6129faad76
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, platform=LINUX, databaseEnabled=false, javascriptEnabled=true, deviceName=HT35JW912039, platformName=Android, browserName=, app-package=com.popcorn.unicorn, webStorageEnabled=false, networkConnectionEnabled=true, app-activity=com.popcorn.unicorn.MainActivity, desired={app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, platformVersion=5.1.1, platformName=Android, deviceName=HT35JW912039, browserName=, app-package=com.popcorn.unicorn, app-activity=com.popcorn.unicorn.MainActivity}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]
+Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.6.apk, platform=LINUX, databaseEnabled=false, javascriptEnabled=true, deviceName=HT35JW912039, platformName=Android, browserName=, app-package=com.popcorn.unicorn, webStorageEnabled=false, networkConnectionEnabled=true, app-activity=com.popcorn.unicorn.MainActivity, desired={app=E:\apk\Unicorn\Unicorn_v0.6.apk, platformVersion=5.1.1, platformName=Android, deviceName=HT35JW912039, browserName=, app-package=com.popcorn.unicorn, app-activity=com.popcorn.unicorn.MainActivity}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -123,16 +126,21 @@ Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, pla
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:421)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByName(DefaultGenericMobileDriver.java:102)
-	at io.appium.java_client.AppiumDriver.findElementByName(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByName(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByName.findElement(By.java:300)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:389)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:215)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at SearchSpa.Product_Sel(SearchSpa.java:52)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:861)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:859)
+	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:387)
+	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at SearchSpa.Product_Sel(SearchSpa.java:56)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -158,67 +166,45 @@ Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, pla
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>15</td>
-<td>SearchSpa@69c2ff33</td></tr>
+<td>300</td>
+<td>SearchSpa@2aaae1dc</td></tr>
 <tr>
 <td title='SearchSpa.Service_sel()'><b>Service_sel</b><br>Test class: SearchSpa</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 5.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<td><div><pre>org.openqa.selenium.remote.SessionNotFoundException: 
+Command duration or timeout: 6 milliseconds
 Build info: version: &apos;2.47.1&apos;, revision: &apos;411b314&apos;, time: &apos;2015-07-30 03:03:16&apos;
 System info: host: &apos;POPTesting-PC&apos;, ip: &apos;10.10.6.122&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_60&apos;
-*** Element info: {Using=id, value=com.popcorn.unicorn:id/services_list}
-Session ID: c4990b7a-1289-4894-925a-91b0772f4c8b
+Session ID: c6d4e6f6-0f00-445d-9c63-4b6129faad76
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, platform=LINUX, databaseEnabled=false, javascriptEnabled=true, deviceName=HT35JW912039, platformName=Android, browserName=, app-package=com.popcorn.unicorn, webStorageEnabled=false, networkConnectionEnabled=true, app-activity=com.popcorn.unicorn.MainActivity, desired={app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, platformVersion=5.1.1, platformName=Android, deviceName=HT35JW912039, browserName=, app-package=com.popcorn.unicorn, app-activity=com.popcorn.unicorn.MainActivity}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]
+Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.6.apk, platform=LINUX, databaseEnabled=false, javascriptEnabled=true, deviceName=HT35JW912039, platformName=Android, browserName=, app-package=com.popcorn.unicorn, webStorageEnabled=false, networkConnectionEnabled=true, app-activity=com.popcorn.unicorn.MainActivity, desired={app=E:\apk\Unicorn\Unicorn_v0.6.apk, platformVersion=5.1.1, platformName=Android, deviceName=HT35JW912039, browserName=, app-package=com.popcorn.unicorn, app-activity=com.popcorn.unicorn.MainActivity}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:164)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:389)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:215)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at SearchSpa.Service_sel(SearchSpa.java:156)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1447920322", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1447920322'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 5.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:774)
+	at SearchSpa.Service_sel(SearchSpa.java:164)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1278702029", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1278702029'><pre>org.openqa.selenium.remote.SessionNotFoundException: 
+Command duration or timeout: 6 milliseconds
 Build info: version: &apos;2.47.1&apos;, revision: &apos;411b314&apos;, time: &apos;2015-07-30 03:03:16&apos;
 System info: host: &apos;POPTesting-PC&apos;, ip: &apos;10.10.6.122&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_60&apos;
-*** Element info: {Using=id, value=com.popcorn.unicorn:id/services_list}
-Session ID: c4990b7a-1289-4894-925a-91b0772f4c8b
+Session ID: c6d4e6f6-0f00-445d-9c63-4b6129faad76
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, platform=LINUX, databaseEnabled=false, javascriptEnabled=true, deviceName=HT35JW912039, platformName=Android, browserName=, app-package=com.popcorn.unicorn, webStorageEnabled=false, networkConnectionEnabled=true, app-activity=com.popcorn.unicorn.MainActivity, desired={app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, platformVersion=5.1.1, platformName=Android, deviceName=HT35JW912039, browserName=, app-package=com.popcorn.unicorn, app-activity=com.popcorn.unicorn.MainActivity}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]
+Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.6.apk, platform=LINUX, databaseEnabled=false, javascriptEnabled=true, deviceName=HT35JW912039, platformName=Android, browserName=, app-package=com.popcorn.unicorn, webStorageEnabled=false, networkConnectionEnabled=true, app-activity=com.popcorn.unicorn.MainActivity, desired={app=E:\apk\Unicorn\Unicorn_v0.6.apk, platformVersion=5.1.1, platformName=Android, deviceName=HT35JW912039, browserName=, app-package=com.popcorn.unicorn, app-activity=com.popcorn.unicorn.MainActivity}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:164)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:389)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:215)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at SearchSpa.Service_sel(SearchSpa.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:774)
+	at SearchSpa.Service_sel(SearchSpa.java:164)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -244,8 +230,8 @@ Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, pla
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>5</td>
-<td>SearchSpa@69c2ff33</td></tr>
+<td>0</td>
+<td>SearchSpa@2aaae1dc</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -257,8 +243,8 @@ Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.5.1.apk, pla
 <tr>
 <td title='SearchSpa.search()'><b>search</b><br>Test class: SearchSpa</td>
 <td></td>
-<td>19</td>
-<td>SearchSpa@69c2ff33</td></tr>
+<td>5</td>
+<td>SearchSpa@2aaae1dc</td></tr>
 </table><p>
 </body>
 </html>

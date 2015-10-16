@@ -3,6 +3,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
@@ -22,8 +24,8 @@ public class Setup {
 			    File app = new File(Landing.apk); //trypal_nov14  Android
 			    DesiredCapabilities capabilities = new DesiredCapabilities();
 			    capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-			    //   capabilities.setCapability("deviceName","HT35JW912039"); //Nexus: 00771695054e2b67: 5.0; sample    HT35JW912039: 4.4.3
-			            capabilities.setCapability("deviceName", "emulator-5554"); //Emulator purpose
+			    capabilities.setCapability("deviceName","HT35JW912039"); //Nexus: 00771695054e2b67: 5.0; sample    HT35JW912039: 4.4.3
+			    //        capabilities.setCapability("deviceName", "emulator-5554"); //Emulator purpose
 			          capabilities.setCapability("platformVersion", "5.1.1");  
 			    capabilities.setCapability("platformName", "Android");     
 			    capabilities.setCapability("app", app.getAbsolutePath());
@@ -45,8 +47,31 @@ public class Setup {
 	{
          System.out.println("Location Selection: ");
 		 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-         driver.scrollToExact("Hyderabad").click();
-         driver.findElement(By.name("SELECT LOCATION")).click();
+		 
+		 
+		 Boolean flag=false;
+			try {
+				flag = Setup.driver.findElement(By.className("android.widget.LinearLayout")).isDisplayed();
+
+			} catch (Exception e) {
+				flag = false;
+			}
+			if (flag) {
+				driver.scrollToExact("Hyderabad").click();
+		         driver.findElement(By.name("SELECT LOCATION")).click();
+			}
+		 
+		else
+		 {
+		 WebElement alert= Setup.driver.findElement(By.id("android:id/button1"));
+			Setup.driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+			alert.click();
+			System.out.println("Network Problem...!");
+			 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			FirefoxDriver fd= new FirefoxDriver();
+			driver.get("wwww.gmail.com");
+			 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		 }
      } 
 	
 }

@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" parallel="none">
-  <test name="Test3(failed)" parallel="none">
+  <test name="SearchSpa(failed)" parallel="none">
     <classes>
       <class name="SearchSpa">
         <methods>
-          <include name="Book_Details"/>
+          <include name="Product_Sel"/>
+          <include name="Service_sel"/>
         </methods>
       </class> <!-- SearchSpa -->
-      <class name="Hamburger">
-        <methods>
-          <include name="search"/>
-        </methods>
-      </class> <!-- Hamburger -->
     </classes>
-  </test> <!-- Test3(failed) -->
-  <test name="Test4(failed)" parallel="none">
-    <classes>
-      <class name="Hamburger">
-        <methods>
-          <include name="Booking"/>
-          <include name="Profile"/>
-          <include name="Reviews"/>
-          <include name="About"/>
-          <include name="Favourites"/>
-          <include name="search"/>
-        </methods>
-      </class> <!-- Hamburger -->
-    </classes>
-  </test> <!-- Test4(failed) -->
+  </test> <!-- SearchSpa(failed) -->
 </suite> <!-- Failed suite [Suite] -->

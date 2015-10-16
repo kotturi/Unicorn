@@ -9,9 +9,7 @@
           <include name="search"/>
           <include name="Time_sel"/>
           <include name="Service_sel"/>
-          <include name="Book"/>
           <include name="Staff_sel"/>
-          <include name="Book_Details"/>
           <include name="Date_sel"/>
         </methods>
       </class> <!-- SearchSpa -->

@@ -9,7 +9,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
 import utilities.Landing;
 
 public class SearchSpa {
@@ -46,9 +50,45 @@ public class SearchSpa {
 	public static void Product_Sel() throws InterruptedException 
 		{
 		 System.out.println("Product selection");
-		 Setup.driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	//	 Setup.driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		 
+		 WebDriverWait wait = new WebDriverWait(Setup.driver, 30);
+		 wait.until(ExpectedConditions.textToBePresentInElement(By.id("com.popcorn.unicorn:id/online_booking"), "Online Booking"));
+		 
+		 System.out.println("Product selection111");
 		  Setup.driver.findElement(By.name(spaname)).sendKeys(Keys.ENTER);
 		 Setup.driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+			 
+		
+		 
+/*     //Dynamic
+		 System.out.println("Product selection");
+		 Setup.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			Setup.driver.findElement(By.id("com.popcorn.unicorn:id/card_listView")).click();
+			Setup.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			
+			List<WebElement> products = Setup.driver.findElements(By.className("android.widget.RelativeLayout"));
+				 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			        System.out.println("countlist : " + products.size());*/
+			       	
+			        /*        List<WebElement> Staff = Setup.driver.findElements(By.className("android.widget.TextView"));
+					 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+				        System.out.println("countlist : " + Staff.size());
+				        int option=0;
+				        double RandomValue =(Math.random()*100)% Staff.size();
+				        long RoundValue =(Math.round(RandomValue)*100)% Staff.size();
+				        
+				        if ( option <= Staff.size()) {
+				        	
+				        	System.out.println( "value : "+RandomValue);
+				        	System.out.println( "Round  : "+RoundValue);
+				        	
+				        	Staff.get((int) RoundValue).click();
+				        	
+				        } else {
+				            throw new NotFoundException("option " + option + " not found");
+				        }*/
+			
 		// working
 //		 Setup.driver.findElement(By.id(servicelink)).click();
 //		  Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -111,14 +151,68 @@ public class SearchSpa {
 	@Test(priority=3)
 	public static void Service_sel() throws InterruptedException 
 		{
-		System.out.println("Service selection");
+		/*System.out.println("Service selection");
 		Setup.driver.findElement(By.id(servicename)).click();
 		 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Setup.driver.findElement(By.name(service)).click();
 		Setup.driver.findElement(By.name(sel_Date_btn)).click();
+		
+		*/
+		
+		//Dynamic
+		System.out.println("Service selection");
+		 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Setup.driver.findElement(By.id("com.popcorn.unicorn:id/services_list")).click();
+		 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		 
+		 List<WebElement> MainService =Setup.driver.findElements(By.className("android.widget.RelativeLayout"));
+		 System.out.println("Service selection1111");
+				 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	        System.out.println("countlist : " + MainService.size());
+	        int option1=1;
+	        double ServiceRandomValue =(Math.random()*100)% MainService.size();
+	        long ServiceRoundValue =(Math.round(ServiceRandomValue)*100)% MainService.size();
+	        
+	        if ( option1 <= MainService.size()) {
+	        	
+	        	System.out.println( "Service value : "+ServiceRandomValue);
+	        	System.out.println( "Service Round  : "+ServiceRoundValue);
+	        	
+	        	MainService.get((int) ServiceRoundValue).click();
+	        	
+	        } else {
+	            throw new NotFoundException("option " + option1 + " not found");
+	        }
+		
+		Setup.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		/*List<WebElement> time = Setup.driver.findElements(By.className("android.widget.TextView"));
+			 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		        System.out.println("countlist : " + time.size());
+		     */  	
+		        List<WebElement> Servicelist = Setup.driver.findElements(By.id("com.popcorn.unicorn:id/services_sticky_layout"));
+				 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			        System.out.println("countlist : " + Servicelist.size());
+			        int option=1;
+			        double RandomValue =(Math.random()*100)% Servicelist.size();
+			        long RoundValue =(Math.round(RandomValue)*100)% Servicelist.size();
+			        
+			        if ( option <= Servicelist.size()) {
+			        	
+			        	System.out.println( "Service value : "+RandomValue);
+			        	System.out.println( "Service Round  : "+RoundValue);
+			        	
+			        	Servicelist.get((int) RoundValue).click();
+			        	
+			        } else {
+			            throw new NotFoundException("option " + option + " not found");
+			        }
+			        Setup.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			        Setup.driver.findElement(By.name(sel_Date_btn)).click();
+		
 		}
 		
-	@Test(priority=4)
+	/*@Test(priority=4)
 	public static void Date_sel() throws InterruptedException 
 		{
 		System.out.println("Date selection");
@@ -128,7 +222,7 @@ public class SearchSpa {
 		Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Setup.driver.findElement(By.id(date_btn)).click();
 		Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		Setup.driver.findElement(By.name("8")).click();
+		Setup.driver.findElement(By.name("10")).click();
 		Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Setup.driver.findElement(By.id("com.popcorn.unicorn:id/footer_name_txt_view")).click();
 		}
@@ -141,6 +235,37 @@ public class SearchSpa {
 		//Setup.driver.findElement(By.name("PRERNA")).click();
 		Setup.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Setup.driver.findElement(By.name(sel_Time_btn)).click();
+		
+		
+		
+		Setup.driver.findElement(By.id("com.popcorn.unicorn:id/staff_sticky_list_view")).click();
+		
+		Setup.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		List<WebElement> time = Setup.driver.findElements(By.className("android.widget.TextView"));
+			 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		        System.out.println("countlist : " + time.size());
+		       	
+		        List<WebElement> Staff = Setup.driver.findElements(By.id("com.popcorn.unicorn:id/row_staff_main_layout"));
+				 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			        System.out.println("countlist : " + Staff.size());
+			        int option=0;
+			        double RandomValue =(Math.random()*100)% Staff.size();
+			        long RoundValue =(Math.round(RandomValue)*100)% Staff.size();
+			        
+			        if ( option <= Staff.size()) {
+			        	
+			        	System.out.println( "Stafe value : "+RandomValue);
+			        	System.out.println( "Round  : "+RoundValue);
+			        	
+			        	Staff.get((int) RoundValue).click();
+			        	
+			        } else {
+			            throw new NotFoundException("option " + option + " not found");
+			        }
+			        Setup.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+					Setup.driver.findElement(By.name(sel_Time_btn)).click();
+		
 		}
 	@Test(priority=6)
 	public static void Time_sel() throws InterruptedException 
@@ -155,18 +280,31 @@ public class SearchSpa {
 		//
 		//List<WebElement> time= Setup.driver.findElement(By.id(time_sel));
 		
-		List<WebElement> time = Setup.driver.findElements(By.className("android.widget.ListView"));
+		List<WebElement> timelist = Setup.driver.findElements(By.className("android.widget.ListView"));
 		 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	        System.out.println("countlist : " + time.size());
+	        System.out.println("countlist : " + timelist.size());
 	       	
-	        List<WebElement> timefields = Setup.driver.findElements(By.className("android.widget.TextView"));
-			 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		        System.out.println("countlist : " + timefields.size());
-		        int option=0;
-		        double number =(Math.random()*100)% timefields.size();
+//	        List<WebElement> timefields = Setup.driver.findElements(By.className("android.widget.TextView"));
+//			 Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+//		        System.out.println("countlist : " + timefields.size());
+		        int option=1;
+		        double RandomValue =(Math.random()*100)% timelist.size();
+		        long RoundValue =(Math.round(RandomValue)*100)% timelist.size();
+		        
+		        if ( option <= timelist.size()) {
+		        	
+		        	System.out.println( "value : "+RandomValue);
+		        	System.out.println( "Round  : "+RoundValue);
+		        	
+		        	timelist.get((int) RoundValue).click();
+		        	
+		        } else {
+		            throw new NotFoundException("option " + option + " not found");
+		        }
+		        
 		        if ( option <= timefields.size()) {
-		        	timefields.get(2).click();
-		        	System.out.println("Clicked :" + timefields.get(2));
+		        	timefields.get(6).click();
+		        	//System.out.println("Clicked :" + timefields.get(1));
 		        	
 		        	System.out.println( "value : "+number);
 		        	
@@ -175,32 +313,47 @@ public class SearchSpa {
 		        }
 		        
 		        
-		        
-		        
-		        
-		        /*WebElement Booktest=Setup.driver.findElement(By.name("Other User already booked this service for same date :2015-10-08."));
+		        WebElement Booktest=Setup.driver.findElement(By.name("Other User already booked this service for same date :2015-10-08."));
 		        if(Booktest.isDisplayed())
 		        {
 		        	Setup.driver.findElement(By.id("android:id/button1")).click();
 		        	timefields.get(1).click();
 		        	System.out.println("Clicked :" + timefields.get(1));
 		        }
-		        else*/
+		        else
 		        	  
 		Setup.driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		Setup.driver.findElement(By.name(sel_Book_btn)).click();
 		}
-	
-	@Test(priority=7)
+	*/
+/*	@Test(priority=7)
 	public static void Book() throws InterruptedException 
 		{
 		//Coment
 		System.out.println("Book Appointment");
-		//Setup.driver.findElement(By.id("com.popcorn.unicorn:id/footer_name_txt_view")).click();
 		Setup.driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-//		Setup.driver.findElement(By.id("android:id/button1")).click();
-//		System.out.println("Book success...!");
 		}
+	@Test(priority=8)
+	public static void Book_Details() throws InterruptedException 
+		{
+		System.out.println("Details Book screen");
+        Setup.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebElement paynow=Setup.driver.findElement(By.id("com.popcorn.unicorn:id/pay_now_txt_view"));
+		scrollTo(Setup.driver, paynow);
+		Setup.driver.findElement(By.id("com.popcorn.unicorn:id/pay_now_txt_view")).click();;
+		Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		WebElement alert= Setup.driver.findElement(By.id("android:id/button1"));
+		Setup.driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+		alert.click();
+		System.out.println("Booking successfull...!");
+		}
+
+	private static void scrollTo(AppiumDriver driver, WebElement paynow) {
+		// TODO Auto-generated method stub
+		
+	}*/
+	
+	
 	/*@Test(priority=8)
 	public void scrollingToBottomofAPage() {
 		//Setup.driver.navigate().to(URL);
@@ -212,22 +365,6 @@ public class SearchSpa {
         ((JavascriptExecutor) driver).executeScript(
                 "arguments[0].scrollIntoView();", element);
     }*/
-	
-	@Test(priority=8)
-	public static void Book_Details() throws InterruptedException 
-		{
-		System.out.println("Details Book screen");
-		Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		Setup.driver.scrollToExact("Person Details");
-        Setup.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Setup.driver.findElement(By.id("com.popcorn.unicorn:id/pay_now_txt_view")).click();;
-		//scrollTo(Setup.driver, paynow);
-		Setup.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		WebElement alert= Setup.driver.findElement(By.id("android:id/button1"));
-		Setup.driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
-		alert.click();
-		System.out.println("Booking successfull...!");
-		}
 	
 	/*@Test(priority=1)
 	public static void search1() throws InterruptedException {
