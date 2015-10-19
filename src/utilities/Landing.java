@@ -3,9 +3,9 @@ package utilities;
 public class Landing {
 	
 	//APK file location
-	public static final String apk="E:\\apk\\Unicorn\\Unicorn_v0.6.apk";
+	public static final String apk="C:\\apk\\Unicorn\\Unicorn_v0.6.apk";
 	//Excel file location
-	public static final String data="E:\\JK_Softwares\\Unicorn_Screens\\1FA2D000.xls";
+	public static final String data="C:\\apk\\Unicorn\\data.xls";
 	
 	//Registration Objects
 	public static final String SignUp="com.popcorn.unicorn:id/sign_up_text";

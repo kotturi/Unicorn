@@ -1,175 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="6" passed="4">
+<testng-results skipped="0" failed="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="411799" started-at="2015-10-16T05:04:38Z" finished-at="2015-10-16T05:11:30Z">
+  <suite name="Suite" duration-ms="130715" started-at="2015-10-18T09:48:05Z" finished-at="2015-10-18T09:50:15Z">
     <groups>
     </groups>
-    <test name="Setup" duration-ms="85702" started-at="2015-10-16T05:04:38Z" finished-at="2015-10-16T05:06:04Z">
+    <test name="Setup" duration-ms="29204" started-at="2015-10-18T09:48:05Z" finished-at="2015-10-18T09:48:34Z">
       <class name="Setup">
-        <test-method status="PASS" signature="configure()[pri:0, instance:Setup@5f937246]" name="configure" duration-ms="68320" started-at="2015-10-16T10:34:38Z" finished-at="2015-10-16T10:35:47Z">
+        <test-method status="PASS" signature="configure()[pri:0, instance:Setup@71ddd078]" name="configure" duration-ms="15334" started-at="2015-10-18T15:18:05Z" finished-at="2015-10-18T15:18:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configure -->
-        <test-method status="PASS" signature="State_Selection()[pri:0, instance:Setup@5f937246]" name="State_Selection" duration-ms="17363" started-at="2015-10-16T10:35:47Z" depends-on-methods="Setup.configure" finished-at="2015-10-16T10:36:04Z">
+        <test-method status="PASS" signature="State_Selection()[pri:0, instance:Setup@71ddd078]" name="State_Selection" duration-ms="13853" started-at="2015-10-18T15:18:20Z" depends-on-methods="Setup.configure" finished-at="2015-10-18T15:18:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- State_Selection -->
       </class> <!-- Setup -->
     </test> <!-- Setup -->
-    <test name="Login" duration-ms="20692" started-at="2015-10-16T05:06:04Z" finished-at="2015-10-16T05:06:25Z">
+    <test name="Login" duration-ms="23119" started-at="2015-10-18T09:48:34Z" finished-at="2015-10-18T09:48:57Z">
       <class name="Login">
-        <test-method status="PASS" signature="user_login()[pri:0, instance:Login@5d14798a]" name="user_login" duration-ms="20690" started-at="2015-10-16T10:36:04Z" finished-at="2015-10-16T10:36:25Z">
+        <test-method status="PASS" signature="user_login()[pri:0, instance:Login@200e5602]" name="user_login" duration-ms="23117" started-at="2015-10-18T15:18:34Z" finished-at="2015-10-18T15:18:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- user_login -->
       </class> <!-- Login -->
     </test> <!-- Login -->
-    <test name="SearchSpa" duration-ms="305281" started-at="2015-10-16T05:06:25Z" finished-at="2015-10-16T05:11:30Z">
+    <test name="SearchSpa" duration-ms="34870" started-at="2015-10-18T09:48:57Z" finished-at="2015-10-18T09:49:32Z">
       <class name="SearchSpa">
-        <test-method status="PASS" signature="search()[pri:0, instance:SearchSpa@2aaae1dc]" name="search" duration-ms="5125" started-at="2015-10-16T10:36:25Z" finished-at="2015-10-16T10:36:30Z">
+        <test-method status="PASS" signature="search()[pri:0, instance:SearchSpa@6fb66469]" name="search" duration-ms="4881" started-at="2015-10-18T15:18:57Z" finished-at="2015-10-18T15:19:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method status="FAIL" signature="Product_Sel()[pri:0, instance:SearchSpa@2aaae1dc]" name="Product_Sel" duration-ms="300138" started-at="2015-10-16T10:36:30Z" finished-at="2015-10-16T10:41:30Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[An unknown server-side error occurred while processing the command. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 300.03 seconds
-Build info: version: '2.47.1', revision: '411b314', time: '2015-07-30 03:03:16'
-System info: host: 'POPTesting-PC', ip: '10.10.6.122', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_60'
-*** Element info: {Using=id, value=com.popcorn.unicorn:id/online_booking}
-Session ID: c6d4e6f6-0f00-445d-9c63-4b6129faad76
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.6.apk, platform=LINUX, databaseEnabled=false, javascriptEnabled=true, deviceName=HT35JW912039, platformName=Android, browserName=, app-package=com.popcorn.unicorn, webStorageEnabled=false, networkConnectionEnabled=true, app-activity=com.popcorn.unicorn.MainActivity, desired={app=E:\apk\Unicorn\Unicorn_v0.6.apk, platformVersion=5.1.1, platformName=Android, deviceName=HT35JW912039, browserName=, app-package=com.popcorn.unicorn, app-activity=com.popcorn.unicorn.MainActivity}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 300.03 seconds
-Build info: version: '2.47.1', revision: '411b314', time: '2015-07-30 03:03:16'
-System info: host: 'POPTesting-PC', ip: '10.10.6.122', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_60'
-*** Element info: {Using=id, value=com.popcorn.unicorn:id/online_booking}
-Session ID: c6d4e6f6-0f00-445d-9c63-4b6129faad76
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.6.apk, platform=LINUX, databaseEnabled=false, javascriptEnabled=true, deviceName=HT35JW912039, platformName=Android, browserName=, app-package=com.popcorn.unicorn, webStorageEnabled=false, networkConnectionEnabled=true, app-activity=com.popcorn.unicorn.MainActivity, desired={app=E:\apk\Unicorn\Unicorn_v0.6.apk, platformVersion=5.1.1, platformName=Android, deviceName=HT35JW912039, browserName=, app-package=com.popcorn.unicorn, app-activity=com.popcorn.unicorn.MainActivity}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:389)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:215)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:861)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:859)
-	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:387)
-	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	at SearchSpa.Product_Sel(SearchSpa.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method status="PASS" signature="Product_Sel()[pri:0, instance:SearchSpa@6fb66469]" name="Product_Sel" duration-ms="21387" started-at="2015-10-18T15:19:02Z" finished-at="2015-10-18T15:19:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Product_Sel -->
-        <test-method status="FAIL" signature="Service_sel()[pri:0, instance:SearchSpa@2aaae1dc]" name="Service_sel" duration-ms="8" started-at="2015-10-16T10:41:30Z" finished-at="2015-10-16T10:41:30Z">
-          <exception class="org.openqa.selenium.remote.SessionNotFoundException">
-            <message>
-              <![CDATA[
-Command duration or timeout: 6 milliseconds
-Build info: version: '2.47.1', revision: '411b314', time: '2015-07-30 03:03:16'
-System info: host: 'POPTesting-PC', ip: '10.10.6.122', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_60'
-Session ID: c6d4e6f6-0f00-445d-9c63-4b6129faad76
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.6.apk, platform=LINUX, databaseEnabled=false, javascriptEnabled=true, deviceName=HT35JW912039, platformName=Android, browserName=, app-package=com.popcorn.unicorn, webStorageEnabled=false, networkConnectionEnabled=true, app-activity=com.popcorn.unicorn.MainActivity, desired={app=E:\apk\Unicorn\Unicorn_v0.6.apk, platformVersion=5.1.1, platformName=Android, deviceName=HT35JW912039, browserName=, app-package=com.popcorn.unicorn, app-activity=com.popcorn.unicorn.MainActivity}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.SessionNotFoundException: 
-Command duration or timeout: 6 milliseconds
-Build info: version: '2.47.1', revision: '411b314', time: '2015-07-30 03:03:16'
-System info: host: 'POPTesting-PC', ip: '10.10.6.122', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_60'
-Session ID: c6d4e6f6-0f00-445d-9c63-4b6129faad76
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{platformVersion=5.0.2, app=E:\apk\Unicorn\Unicorn_v0.6.apk, platform=LINUX, databaseEnabled=false, javascriptEnabled=true, deviceName=HT35JW912039, platformName=Android, browserName=, app-package=com.popcorn.unicorn, webStorageEnabled=false, networkConnectionEnabled=true, app-activity=com.popcorn.unicorn.MainActivity, desired={app=E:\apk\Unicorn\Unicorn_v0.6.apk, platformVersion=5.1.1, platformName=Android, deviceName=HT35JW912039, browserName=, app-package=com.popcorn.unicorn, app-activity=com.popcorn.unicorn.MainActivity}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:164)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:774)
-	at SearchSpa.Service_sel(SearchSpa.java:164)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.SessionNotFoundException -->
+        <test-method status="PASS" signature="Service_sel()[pri:0, instance:SearchSpa@6fb66469]" name="Service_sel" duration-ms="8598" started-at="2015-10-18T15:19:23Z" finished-at="2015-10-18T15:19:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Service_sel -->
       </class> <!-- SearchSpa -->
     </test> <!-- SearchSpa -->
+    <test name="Hamburger" duration-ms="43480" started-at="2015-10-18T09:49:32Z" finished-at="2015-10-18T09:50:15Z">
+      <class name="Hamburger">
+        <test-method status="PASS" signature="search()[pri:0, instance:Hamburger@47845cb3]" name="search" is-config="true" duration-ms="17770" started-at="2015-10-18T15:19:32Z" finished-at="2015-10-18T15:19:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="About()[pri:0, instance:Hamburger@47845cb3]" name="About" duration-ms="6165" started-at="2015-10-18T15:19:50Z" finished-at="2015-10-18T15:19:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- About -->
+        <test-method status="PASS" signature="search()[pri:0, instance:Hamburger@47845cb3]" name="search" is-config="true" duration-ms="196" started-at="2015-10-18T15:19:56Z" finished-at="2015-10-18T15:19:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="Booking()[pri:0, instance:Hamburger@47845cb3]" name="Booking" duration-ms="3888" started-at="2015-10-18T15:19:56Z" finished-at="2015-10-18T15:20:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Booking -->
+        <test-method status="PASS" signature="search()[pri:0, instance:Hamburger@47845cb3]" name="search" is-config="true" duration-ms="887" started-at="2015-10-18T15:20:00Z" finished-at="2015-10-18T15:20:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="Favourites()[pri:0, instance:Hamburger@47845cb3]" name="Favourites" duration-ms="3631" started-at="2015-10-18T15:20:01Z" finished-at="2015-10-18T15:20:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Favourites -->
+        <test-method status="PASS" signature="search()[pri:0, instance:Hamburger@47845cb3]" name="search" is-config="true" duration-ms="1085" started-at="2015-10-18T15:20:05Z" finished-at="2015-10-18T15:20:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="Reviews()[pri:0, instance:Hamburger@47845cb3]" name="Reviews" duration-ms="4441" started-at="2015-10-18T15:20:06Z" finished-at="2015-10-18T15:20:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Reviews -->
+        <test-method status="PASS" signature="search()[pri:0, instance:Hamburger@47845cb3]" name="search" is-config="true" duration-ms="902" started-at="2015-10-18T15:20:10Z" finished-at="2015-10-18T15:20:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="Profile()[pri:0, instance:Hamburger@47845cb3]" name="Profile" duration-ms="4508" started-at="2015-10-18T15:20:11Z" finished-at="2015-10-18T15:20:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Profile -->
+      </class> <!-- Hamburger -->
+    </test> <!-- Hamburger -->
   </suite> <!-- Suite -->
 </testng-results>

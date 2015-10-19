@@ -9,12 +9,14 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import utilities.Landing;
 
 public class Setup {
 		
 	static AppiumDriver driver = null;
+	//static AndroidDriver<MobileElement> driver=null;
 	@Test
 	public static void configure() throws MalformedURLException, InterruptedException
 	{
@@ -32,9 +34,19 @@ public class Setup {
 			    capabilities.setCapability("app-package", "com.popcorn.unicorn");  
 			    capabilities.setCapability("app-activity", "com.popcorn.unicorn.MainActivity"); //com.example.samplespinnerproject
 			    //driver1= new RemoteWebDriver( new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-			//    driver= new AndroidDriver( new URL("http://127.0.0.1:4723/wd/hub"), capabilities) ;
-			    driver = new AndroidDriver( new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-			    Thread.sleep(4000);
+			    driver= new AndroidDriver( new URL("http://127.0.0.1:4723/wd/hub"), capabilities) ;
+			    System.out.println("Installing the native Archetype app in device...");
+		  	/*if (driver.isAppInstalled("com.archetyps.cameraapplication")) {
+		  		System.out.println("isAppInstalled - "
+		  				+ driver.isAppInstalled("com.popcorn.unicorn"));
+		  		System.out.println("App is already installed");
+		  	} else 
+		  	{
+		  		System.out.println("App not installed.");
+		  		driver.installApp(Landing.apk);	
+		  		
+		  		State_Selection();
+		    }*/
 		}
 		catch(Exception e)
 		{

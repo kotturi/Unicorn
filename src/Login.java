@@ -19,16 +19,25 @@ import utilities.Landing;
 
 public class Login {
 	
-	static String login=Landing.login_link;
+	//Login Objects
+		public static final String login_link="com.popcorn.unicorn:id/login_text";
+		public static final String mobileNo_txt="com.popcorn.unicorn:id/user_name_etxt";
+		public static final String password_txt="com.popcorn.unicorn:id/pwd_etxt";
+		public static final String login_Btn="com.popcorn.unicorn:id/login_btn";
+		
+	
+	
+	/*static String login=Landing.login_link;
 	static String mobile_No=Landing.mobileNo_txt;
 	static String password=Landing.password_txt;
 	static String loginBtn=Landing.login_Btn;
-    static String datafile=Landing.data;
+    static String datafile=Landing.data;*/
 	
 	@Test
 	public static void user_login() throws BiffException, IOException
 	{
 		try{
+			Thread.sleep(2000);
 		System.out.println("Login started: ");
 		Boolean flag=false;
 		try {
@@ -109,7 +118,7 @@ public class Login {
     	String methodName=result.getName().toString().trim();
     	takeScreenShot();//methodName
     }
-    
+    //TEST MAVEN
     
     public  static void takeScreenShot() { //String methodName
     	//get the driver

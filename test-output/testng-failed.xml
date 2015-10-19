@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" parallel="none">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
+  <test name="Setup(failed)" parallel="none">
+    <classes>
+      <class name="Hamburger">
+        <methods>
+          <include name="search"/>
+        </methods>
+      </class> <!-- Hamburger -->
+      <class name="Setup">
+        <methods>
+          <include name="State_Selection"/>
+          <include name="configure"/>
+        </methods>
+      </class> <!-- Setup -->
+    </classes>
+  </test> <!-- Setup(failed) -->
   <test name="SearchSpa(failed)" parallel="none">
     <classes>
       <class name="SearchSpa">
         <methods>
           <include name="Product_Sel"/>
+          <include name="search"/>
           <include name="Service_sel"/>
         </methods>
       </class> <!-- SearchSpa -->
+      <class name="Hamburger">
+        <methods>
+          <include name="search"/>
+        </methods>
+      </class> <!-- Hamburger -->
     </classes>
   </test> <!-- SearchSpa(failed) -->
+  <test name="Hamburger(failed)" parallel="none">
+    <classes>
+      <class name="Hamburger">
+        <methods>
+          <include name="Booking"/>
+          <include name="Profile"/>
+          <include name="Reviews"/>
+          <include name="About"/>
+          <include name="Favourites"/>
+          <include name="search"/>
+        </methods>
+      </class> <!-- Hamburger -->
+    </classes>
+  </test> <!-- Hamburger(failed) -->
 </suite> <!-- Failed suite [Suite] -->

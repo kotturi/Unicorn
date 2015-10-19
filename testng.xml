@@ -2,12 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="none">
 
-	 <test name="Setup">
+	   <test name="Setup">
 		<classes>
 			<class name="Setup" />
 		</classes>
 	</test>
-      <!-- <test name="Registration">
+   <!--    <test name="Registration">
 		<classes>
 			<class name="Registration" />
 		</classes>
@@ -23,17 +23,17 @@
 			<class name="SearchSpa" />
 		</classes>
 	 </test>   
-	 <!--   <test name="Hamburger">
+	   <test name="Hamburger">
 		<classes>
 			<class name="Hamburger" />
 		</classes>
 	</test> 
 	
-	 <test name="Logout">
+<!-- 	 <test name="Logout">
 		<classes>
 			<class name="Logout" />
 		</classes>
-	</test>    -->
-	
-
-</suite> <!-- Suite -->
+	</test>   
+ -->	
+ 
+  </suite> <!-- Suite -->
